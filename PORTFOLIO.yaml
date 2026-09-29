@@ -1,0 +1,15 @@
+schema_version: 1
+repository: optimization-methods-taxonomy
+role: umbrella
+axis: methodology
+area: optimization-taxonomy
+status: active
+owner: jorsacademy
+projects:
+  - integer-programming-for-operations-research
+  - intertemporal-optimization-for-operations-research
+  - optimizasyon-yontemleri-taksonomisi
+conventions:
+  provenance_records: true
+  reproducibility_expected: true
+  benchmark_assumptions_documented: true
