@@ -20,6 +20,8 @@ Each consolidated project keeps its own files and a `SOURCE_REPOSITORY.md` prove
 
 > Portfolio navigation: see [PORTFOLIO_MAP.md](PORTFOLIO_MAP.md) for the cross-repository map by application domain and methodology.
 >
+> Portfolio standards: see [PORTFOLIO_CONVENTIONS.md](PORTFOLIO_CONVENTIONS.md) for repository roles, provenance, metadata, and reproducibility conventions.
+>
 > Machine-generated index: see [PORTFOLIO_INDEX.md](PORTFOLIO_INDEX.md), derived from [portfolio/catalog.json](portfolio/catalog.json).
 >
 > Portfolio governance: see [docs/portfolio-governance.md](docs/portfolio-governance.md) for the metadata contract and automated cross-repository audit.
