@@ -16,6 +16,8 @@ Each consolidated project keeps its own files and a `SOURCE_REPOSITORY.md` prove
 
 > Portfolio navigation: see [PORTFOLIO_MAP.md](PORTFOLIO_MAP.md) for the cross-repository map by application domain and methodology.
 >
+> Machine-generated index: see [PORTFOLIO_INDEX.md](PORTFOLIO_INDEX.md), derived from [portfolio/catalog.json](portfolio/catalog.json).
+>
 > Portfolio governance: see [docs/portfolio-governance.md](docs/portfolio-governance.md) for the metadata contract and automated cross-repository audit.
 
 A practical, concept-first guide to classifying optimization models and algorithms without mixing independent concepts.
