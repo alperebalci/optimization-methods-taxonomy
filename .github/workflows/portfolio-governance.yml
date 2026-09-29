@@ -1,0 +1,34 @@
+name: Portfolio Governance
+
+on:
+  push:
+    paths:
+      - "PORTFOLIO_MAP.md"
+      - "portfolio/**"
+      - "scripts/portfolio_governance.py"
+      - "docs/portfolio-governance.md"
+      - ".github/workflows/portfolio-governance.yml"
+  pull_request:
+    paths:
+      - "PORTFOLIO_MAP.md"
+      - "portfolio/**"
+      - "scripts/portfolio_governance.py"
+      - "docs/portfolio-governance.md"
+      - ".github/workflows/portfolio-governance.yml"
+  schedule:
+    - cron: "17 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate portfolio governance
+        run: python scripts/portfolio_governance.py
