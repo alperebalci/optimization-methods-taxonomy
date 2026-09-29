@@ -49,6 +49,7 @@ This map is generated from `PORTFOLIO_REGISTRY.json` and organizes the public Jo
 
 - [Optimization Methods Taxonomy](https://github.com/jorsacademy/optimization-methods-taxonomy)
 - [Computational Optimization Methods](https://github.com/jorsacademy/computational-optimization-methods)
+- [Decomposition And Large Scale Optimization](https://github.com/jorsacademy/decomposition-and-large-scale-optimization)
 - [Benders Decomposition Methods](https://github.com/jorsacademy/benders-decomposition-methods)
 - [Stochastic Programming Methods](https://github.com/jorsacademy/stochastic-programming-methods)
 - [Inverse Optimization](https://github.com/jorsacademy/inverse-optimization)
@@ -57,6 +58,7 @@ This map is generated from `PORTFOLIO_REGISTRY.json` and organizes the public Jo
 ### Optimization under Uncertainty
 
 - [Stochastic Programming Methods](https://github.com/jorsacademy/stochastic-programming-methods)
+- [Robust And Distributionally Robust Optimization](https://github.com/jorsacademy/robust-and-distributionally-robust-optimization)
 - [Simulation Optimization And Uncertainty Quantification](https://github.com/jorsacademy/simulation-optimization-and-uncertainty-quantification)
 - [Robust And Adaptive Supply Chain Optimization](https://github.com/jorsacademy/robust-and-adaptive-supply-chain-optimization)
 - [Inventory Optimization And Control](https://github.com/jorsacademy/inventory-optimization-and-control)
@@ -95,7 +97,5 @@ Primary umbrella repositories should:
 
 ## Planned methodological gaps
 
-- `robust-and-distributionally-robust-optimization`
-- `decomposition-and-large-scale-optimization`
 
 These entries are planning targets only; they should become top-level umbrellas when dedicated repositories are created.
