@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "owner": "jorsacademy",
+  "domains": {
+    "Supply Chain, Logistics and Operations": [
+      "supply-chain-network-optimization",
+      "robust-and-adaptive-supply-chain-optimization",
+      "inventory-optimization-and-control",
+      "production-planning-optimization",
+      "vehicle-routing-optimization",
+      "warehouse-and-terminal-optimization",
+      "resource-allocation-optimization"
+    ],
+    "Manufacturing and Industrial Systems": [
+      "manufacturing-systems-optimization",
+      "classical-scheduling-optimization",
+      "learning-based-scheduling-optimization",
+      "process-industries-optimization",
+      "industry-4.0-lab",
+      "engineering-design-optimization",
+      "packing-and-cutting-optimization"
+    ],
+    "Transportation, Mobility and Aviation": [
+      "transportation-and-mobility-optimization",
+      "aviation-operations-optimization",
+      "mission-planning-optimization",
+      "location-and-spatial-optimization"
+    ],
+    "Energy": [
+      "energy-systems-optimization"
+    ],
+    "Finance and Revenue": [
+      "banking-and-financial-services-optimization",
+      "derivatives-pricing-hedging-and-xva",
+      "quantitative-trading-and-market-microstructure-optimization",
+      "pricing-and-revenue-optimization",
+      "machine-learning-in-finance-course"
+    ]
+  },
+  "methodologies": {
+    "Mathematical Programming and Exact Methods": [
+      "optimization-methods-taxonomy",
+      "computational-optimization-methods",
+      "benders-decomposition-methods",
+      "stochastic-programming-methods",
+      "inverse-optimization",
+      "classical-scheduling-optimization"
+    ],
+    "Optimization under Uncertainty": [
+      "stochastic-programming-methods",
+      "simulation-optimization-and-uncertainty-quantification",
+      "robust-and-adaptive-supply-chain-optimization",
+      "inventory-optimization-and-control",
+      "sequential-decision-analytics",
+      "bayesian-and-black-box-optimization"
+    ],
+    "Learning + Optimization": [
+      "learning-augmented-optimization-solvers",
+      "decision-focused-learning-and-differentiable-optimization",
+      "graph-learning-combinatorial-optimization",
+      "neural-combinatorial-optimization",
+      "neural-optimization-methods",
+      "industrial-reinforcement-learning",
+      "llm-for-mathematical-optimization",
+      "performative-optimization",
+      "constraint-learning-for-industrial-engineering"
+    ],
+    "Graph, Combinatorial and Search Methods": [
+      "graph-learning-combinatorial-optimization",
+      "neural-combinatorial-optimization",
+      "vehicle-routing-optimization",
+      "packing-and-cutting-optimization",
+      "location-and-spatial-optimization"
+    ]
+  },
+  "planned_methodological_umbrellas": [
+    "robust-and-distributionally-robust-optimization",
+    "decomposition-and-large-scale-optimization"
+  ]
+}
