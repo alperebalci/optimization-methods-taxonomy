@@ -14,6 +14,8 @@ This repository is the primary umbrella repository for this Jors Academy researc
 Each consolidated project keeps its own files and a `SOURCE_REPOSITORY.md` provenance record. The snapshot preserves the source repository's default-branch files at consolidation time; repository-level history and metadata remain separate from the snapshot.
 <!-- portfolio-umbrella:end -->
 
+> Portfolio navigation: see [PORTFOLIO_MAP.md](PORTFOLIO_MAP.md) for the cross-repository map by application domain and methodology.
+
 A practical, concept-first guide to classifying optimization models and algorithms without mixing independent concepts.
 
 Optimization terminology is often taught as if methods belong to one simple tree: *exact vs. heuristic*, *deterministic vs. stochastic*, or *local vs. global*. That is convenient, but incomplete. These labels describe **different properties**. A single algorithm can belong to several categories at the same time.
