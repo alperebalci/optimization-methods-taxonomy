@@ -1,0 +1,366 @@
+{
+  "schema_version": 1,
+  "owner": "jorsacademy",
+  "repositories": [
+    {
+      "repository": "aviation-operations-optimization",
+      "title": "Aviation Operations Optimization",
+      "axis": "application",
+      "area": "aviation",
+      "group": "Transportation, mobility and aviation",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "banking-and-financial-services-optimization",
+      "title": "Banking and Financial Services Optimization",
+      "axis": "application",
+      "area": "banking-financial-services",
+      "group": "Finance and revenue",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "bayesian-and-black-box-optimization",
+      "title": "Bayesian and Black-Box Optimization",
+      "axis": "methodology",
+      "area": "bayesian-black-box-optimization",
+      "group": "Optimization foundations and methods",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "benders-decomposition-methods",
+      "title": "Benders Decomposition Methods",
+      "axis": "methodology",
+      "area": "benders-decomposition",
+      "group": "Optimization foundations and methods",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "classical-scheduling-optimization",
+      "title": "Classical Scheduling Optimization",
+      "axis": "problem-class",
+      "area": "scheduling",
+      "group": "Operations and supply chain",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "computational-optimization-methods",
+      "title": "Computational Optimization Methods",
+      "axis": "methodology",
+      "area": "computational-optimization",
+      "group": "Optimization foundations and methods",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "decision-focused-learning-and-differentiable-optimization",
+      "title": "Decision-Focused Learning and Differentiable Optimization",
+      "axis": "methodology",
+      "area": "decision-focused-learning",
+      "group": "Learning and optimization",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "derivatives-pricing-hedging-and-xva",
+      "title": "Derivatives Pricing, Hedging and XVA",
+      "axis": "application",
+      "area": "derivatives-xva",
+      "group": "Finance and revenue",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "energy-systems-optimization",
+      "title": "Energy Systems Optimization",
+      "axis": "application",
+      "area": "energy",
+      "group": "Industrial and engineering systems",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "engineering-design-optimization",
+      "title": "Engineering Design Optimization",
+      "axis": "application",
+      "area": "engineering-design",
+      "group": "Industrial and engineering systems",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "graph-learning-combinatorial-optimization",
+      "title": "Graph Learning for Combinatorial Optimization",
+      "axis": "methodology",
+      "area": "graph-learning-combinatorial-optimization",
+      "group": "Learning and optimization",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "industrial-reinforcement-learning",
+      "title": "Industrial Reinforcement Learning",
+      "axis": "methodology",
+      "area": "industrial-reinforcement-learning",
+      "group": "Learning and optimization",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "industry-4.0-lab",
+      "title": "Industry 4.0 Lab",
+      "axis": "application",
+      "area": "industry-4-0",
+      "group": "Industrial and engineering systems",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "inventory-optimization-and-control",
+      "title": "Inventory Optimization and Control",
+      "axis": "problem-class",
+      "area": "inventory",
+      "group": "Operations and supply chain",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "inverse-optimization",
+      "title": "Inverse Optimization",
+      "axis": "methodology",
+      "area": "inverse-optimization",
+      "group": "Optimization foundations and methods",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "learning-augmented-optimization-solvers",
+      "title": "Learning-Augmented Optimization Solvers",
+      "axis": "methodology",
+      "area": "learning-augmented-solvers",
+      "group": "Learning and optimization",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "learning-based-scheduling-optimization",
+      "title": "Learning-Based Scheduling Optimization",
+      "axis": "methodology",
+      "area": "learning-based-scheduling",
+      "group": "Learning and optimization",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "llm-for-mathematical-optimization",
+      "title": "LLM for Mathematical Optimization",
+      "axis": "methodology",
+      "area": "llm-mathematical-optimization",
+      "group": "Learning and optimization",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "location-and-spatial-optimization",
+      "title": "Location and Spatial Optimization",
+      "axis": "problem-class",
+      "area": "location-spatial",
+      "group": "Operations and supply chain",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "machine-learning-in-finance-course",
+      "title": "Machine Learning in Finance Course",
+      "axis": "application",
+      "area": "machine-learning-finance",
+      "group": "Finance and revenue",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "manufacturing-systems-optimization",
+      "title": "Manufacturing Systems Optimization",
+      "axis": "application",
+      "area": "manufacturing",
+      "group": "Industrial and engineering systems",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "mission-planning-optimization",
+      "title": "Mission Planning Optimization",
+      "axis": "application",
+      "area": "mission-planning",
+      "group": "Transportation, mobility and aviation",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "neural-combinatorial-optimization",
+      "title": "Neural Combinatorial Optimization",
+      "axis": "methodology",
+      "area": "neural-combinatorial-optimization",
+      "group": "Learning and optimization",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "neural-optimization-methods",
+      "title": "Neural Optimization Methods",
+      "axis": "methodology",
+      "area": "learned-optimizers",
+      "group": "Learning and optimization",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "optimization-methods-taxonomy",
+      "title": "Optimization Methods Taxonomy",
+      "axis": "methodology",
+      "area": "optimization-taxonomy",
+      "group": "Optimization foundations and methods",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "packing-and-cutting-optimization",
+      "title": "Packing and Cutting Optimization",
+      "axis": "problem-class",
+      "area": "packing-cutting",
+      "group": "Operations and supply chain",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "pricing-and-revenue-optimization",
+      "title": "Pricing and Revenue Optimization",
+      "axis": "application",
+      "area": "pricing-revenue",
+      "group": "Finance and revenue",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "process-industries-optimization",
+      "title": "Process Industries Optimization",
+      "axis": "application",
+      "area": "process-industries",
+      "group": "Industrial and engineering systems",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "production-planning-optimization",
+      "title": "Production Planning Optimization",
+      "axis": "problem-class",
+      "area": "production-planning",
+      "group": "Operations and supply chain",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "quantitative-trading-and-market-microstructure-optimization",
+      "title": "Quantitative Trading and Market Microstructure Optimization",
+      "axis": "application",
+      "area": "quantitative-trading",
+      "group": "Finance and revenue",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "resource-allocation-optimization",
+      "title": "Resource Allocation Optimization",
+      "axis": "problem-class",
+      "area": "resource-allocation",
+      "group": "Operations and supply chain",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "robust-and-adaptive-supply-chain-optimization",
+      "title": "Robust and Adaptive Supply Chain Optimization",
+      "axis": "application",
+      "area": "robust-supply-chain",
+      "group": "Operations and supply chain",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "sequential-decision-analytics",
+      "title": "Sequential Decision Analytics",
+      "axis": "methodology",
+      "area": "sequential-decision-analytics",
+      "group": "Optimization foundations and methods",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "simulation-optimization-and-uncertainty-quantification",
+      "title": "Simulation Optimization and Uncertainty Quantification",
+      "axis": "methodology",
+      "area": "simulation-optimization-uq",
+      "group": "Optimization foundations and methods",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "stochastic-programming-methods",
+      "title": "Stochastic Programming Methods",
+      "axis": "methodology",
+      "area": "stochastic-programming",
+      "group": "Optimization foundations and methods",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "supply-chain-network-optimization",
+      "title": "Supply Chain Network Optimization",
+      "axis": "application",
+      "area": "supply-chain-network",
+      "group": "Operations and supply chain",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "transportation-and-mobility-optimization",
+      "title": "Transportation and Mobility Optimization",
+      "axis": "application",
+      "area": "transportation-mobility",
+      "group": "Transportation, mobility and aviation",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "vehicle-routing-optimization",
+      "title": "Vehicle Routing Optimization",
+      "axis": "problem-class",
+      "area": "vehicle-routing",
+      "group": "Operations and supply chain",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "warehouse-and-terminal-optimization",
+      "title": "Warehouse and Terminal Optimization",
+      "axis": "application",
+      "area": "warehouse-terminal",
+      "group": "Operations and supply chain",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "workforce-optimization-and-analytics",
+      "title": "Workforce Optimization and Analytics",
+      "axis": "problem-class",
+      "area": "workforce",
+      "group": "Operations and supply chain",
+      "role": "umbrella",
+      "default_branch": "main"
+    }
+  ]
+}
