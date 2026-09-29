@@ -30,5 +30,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Check generated portfolio index
+        run: python scripts/render_portfolio_index.py --check
       - name: Validate portfolio governance
         run: python scripts/portfolio_governance.py
