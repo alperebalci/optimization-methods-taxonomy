@@ -41,6 +41,7 @@
     "Mathematical Programming and Exact Methods": [
       "optimization-methods-taxonomy",
       "computational-optimization-methods",
+      "decomposition-and-large-scale-optimization",
       "benders-decomposition-methods",
       "stochastic-programming-methods",
       "inverse-optimization",
@@ -48,6 +49,7 @@
     ],
     "Optimization under Uncertainty": [
       "stochastic-programming-methods",
+      "robust-and-distributionally-robust-optimization",
       "simulation-optimization-and-uncertainty-quantification",
       "robust-and-adaptive-supply-chain-optimization",
       "inventory-optimization-and-control",
@@ -73,8 +75,5 @@
       "location-and-spatial-optimization"
     ]
   },
-  "planned_methodological_umbrellas": [
-    "robust-and-distributionally-robust-optimization",
-    "decomposition-and-large-scale-optimization"
-  ]
+  "planned_methodological_umbrellas": []
 }
