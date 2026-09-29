@@ -1,0 +1,25 @@
+name: Portfolio map consistency
+
+on:
+  push:
+    paths:
+      - "PORTFOLIO_REGISTRY.json"
+      - "PORTFOLIO_MAP.md"
+      - "scripts/generate_portfolio_map.py"
+      - ".github/workflows/portfolio-map.yml"
+  pull_request:
+    paths:
+      - "PORTFOLIO_REGISTRY.json"
+      - "PORTFOLIO_MAP.md"
+      - "scripts/generate_portfolio_map.py"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check generated portfolio map
+        run: python scripts/generate_portfolio_map.py --check
