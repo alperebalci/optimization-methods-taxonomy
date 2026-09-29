@@ -12,6 +12,7 @@ This map organizes the public Jors Academy portfolio along two independent axes:
 - [Vehicle Routing Optimization](https://github.com/jorsacademy/vehicle-routing-optimization)
 - [Warehouse and Terminal Optimization](https://github.com/jorsacademy/warehouse-and-terminal-optimization)
 - [Resource Allocation Optimization](https://github.com/jorsacademy/resource-allocation-optimization)
+- [Workforce Optimization and Analytics](https://github.com/jorsacademy/workforce-optimization-and-analytics)
 
 ### Manufacturing and industrial systems
 - [Manufacturing Systems Optimization](https://github.com/jorsacademy/manufacturing-systems-optimization)
@@ -82,6 +83,10 @@ Primary umbrella repositories should:
 3. preserve source provenance for consolidated projects;
 4. expose reproducible tests, benchmark assumptions and limitations;
 5. prefer a small number of coherent research umbrellas over one repository per small example.
+
+## Governance
+
+The machine-readable repository contract and automated validation rules are documented in [docs/portfolio-governance.md](docs/portfolio-governance.md). The governed umbrella catalog lives in [portfolio/catalog.json](portfolio/catalog.json).
 
 ## Planned methodological gaps
 
