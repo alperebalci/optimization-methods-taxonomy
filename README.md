@@ -86,6 +86,7 @@ Read the guide in this order:
 13. [Computational complexity for optimization](docs/13-computational-complexity.md)
 14. [Benchmarking and experimental methodology](docs/14-benchmarking-experimental-methodology.md)
 15. [Explainable optimization](docs/15-explainable-optimization.md)
+16. [Operations Research software ecosystem: modelers, solvers and specialized engines](docs/16-or-software-ecosystem.md)
 
 ## A first example: classify Genetic Algorithm correctly
 
@@ -128,7 +129,7 @@ These definitions are intentionally explicit so the terms are not used interchan
 
 ## Scope
 
-The guide covers classical mathematical programming, combinatorial optimization, continuous optimization, metaheuristics, multi-objective optimization, robust and stochastic optimization, online/dynamic optimization, black-box optimization, surrogate methods, distributed optimization and hybrid exact–heuristic methods. It also separates computational complexity from empirical runtime, provides a reproducible benchmarking framework, and introduces optimization-specific explanation tools such as sensitivity analysis, counterfactual re-optimization, and inverse optimization. The final algorithm index consolidates the named methods used throughout the tutorial into one searchable appendix.
+The guide covers classical mathematical programming, combinatorial optimization, continuous optimization, metaheuristics, multi-objective optimization, robust and stochastic optimization, online/dynamic optimization, black-box optimization, surrogate methods, distributed optimization and hybrid exact–heuristic methods. It also maps the Operations Research software ecosystem, separating algebraic modeling languages and modeling frameworks from numerical solvers, constraint-programming engines, routing/planning systems, and uncertainty-specific packages. It also separates computational complexity from empirical runtime, provides a reproducible benchmarking framework, and introduces optimization-specific explanation tools such as sensitivity analysis, counterfactual re-optimization, and inverse optimization. The final algorithm index consolidates the named methods used throughout the tutorial into one searchable appendix.
 
 It is a **taxonomy and conceptual guide**, not a replacement for a full textbook on convergence theory, computational complexity, numerical linear algebra, or solver implementation.
 
