@@ -2,6 +2,8 @@
 
 This map is generated from `PORTFOLIO_REGISTRY.json` and organizes the public Jors Academy portfolio along two independent axes: **application domain** and **methodology**. A repository may appear in more than one conceptual family; the purpose is navigation, not a mutually exclusive taxonomy.
 
+Portfolio curriculum, coverage analysis, scope decisions, and strategic priorities are maintained in [docs/modern-ie-or-curriculum-and-portfolio-alignment.md](docs/modern-ie-or-curriculum-and-portfolio-alignment.md).
+
 ## By application domain
 
 ### Supply Chain, Logistics and Operations
