@@ -73,6 +73,14 @@
       "vehicle-routing-optimization",
       "packing-and-cutting-optimization",
       "location-and-spatial-optimization"
+    ],
+    "Strategic, Game-Theoretic and Adversarial Optimization": [
+      "resource-allocation-optimization"
+    ],
+    "Prescriptive Decision Systems and Closed-Loop Control": [
+      "production-planning-optimization",
+      "sequential-decision-analytics",
+      "industrial-reinforcement-learning"
     ]
   },
   "planned_methodological_umbrellas": []
