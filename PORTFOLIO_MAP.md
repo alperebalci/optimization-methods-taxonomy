@@ -85,6 +85,16 @@ This map is generated from `PORTFOLIO_REGISTRY.json` and organizes the public Jo
 - [Packing And Cutting Optimization](https://github.com/jorsacademy/packing-and-cutting-optimization)
 - [Location And Spatial Optimization](https://github.com/jorsacademy/location-and-spatial-optimization)
 
+### Strategic, Game-Theoretic and Adversarial Optimization
+
+- [Resource Allocation Optimization](https://github.com/jorsacademy/resource-allocation-optimization)
+
+### Prescriptive Decision Systems and Closed-Loop Control
+
+- [Production Planning Optimization](https://github.com/jorsacademy/production-planning-optimization)
+- [Sequential Decision Analytics](https://github.com/jorsacademy/sequential-decision-analytics)
+- [Industrial Reinforcement Learning](https://github.com/jorsacademy/industrial-reinforcement-learning)
+
 ## Portfolio conventions
 
 Primary umbrella repositories should:
