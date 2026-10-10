@@ -22,3 +22,9 @@ Local, read-only invocation (network and GitHub rate limits apply):
     GH_TOKEN=<your token> python scripts/audit_github_ci.py --owner alperebalci --output ci-health.json --summary ci-health.md
 
 Never commit access tokens or secret-bearing output. The GitHub Actions workflow reads the provided ephemeral token via environment and publishes no token value.
+
+## Workflow inventory coverage
+
+The original audit only inspected workflows with a current HEAD run. That could produce a false-green result when a different path-filtered workflow never executed. The revised audit reads the committed `.github/workflows/*.yml` and `.yaml` filenames and compares them to workflow run paths. An absent current-HEAD run for an existing workflow is now `partial`, reported with that workflow path. Manual-only and path-scoped workflows will typically be partial; this is an explicit coverage caveat, **not** proof of a failed job.
+
+The audit does not execute imported-project suites or configure GitHub branch protection. It fails on actual run failures and API errors, but reports partial coverage without silently changing the rules for existing tests.
