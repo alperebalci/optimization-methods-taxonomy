@@ -2,16 +2,9 @@ name: Portfolio map consistency
 
 on:
   push:
-    paths:
-      - "PORTFOLIO_REGISTRY.json"
-      - "PORTFOLIO_MAP.md"
-      - "scripts/generate_portfolio_map.py"
-      - ".github/workflows/portfolio-map.yml"
+    branches: [main]
   pull_request:
-    paths:
-      - "PORTFOLIO_REGISTRY.json"
-      - "PORTFOLIO_MAP.md"
-      - "scripts/generate_portfolio_map.py"
+  workflow_dispatch:
 
 jobs:
   check:
