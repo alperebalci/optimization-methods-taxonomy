@@ -15,6 +15,7 @@ Portfolio curriculum, coverage analysis, scope decisions, and strategic prioriti
 - [Vehicle Routing Optimization](https://github.com/jorsacademy/vehicle-routing-optimization)
 - [Warehouse And Terminal Optimization](https://github.com/jorsacademy/warehouse-and-terminal-optimization)
 - [Resource Allocation Optimization](https://github.com/jorsacademy/resource-allocation-optimization)
+- [Workforce Optimization and Analytics](https://github.com/jorsacademy/workforce-optimization-and-analytics)
 
 ### Manufacturing and Industrial Systems
 
