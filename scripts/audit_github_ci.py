@@ -12,6 +12,7 @@ import concurrent.futures
 import json
 import os
 import sys
+import urllib.error
 import urllib.parse
 import urllib.request
 from collections import Counter
@@ -44,30 +45,66 @@ def list_public_repositories(owner: str) -> list[dict]:
     raise RuntimeError("repository listing exceeded 1000 records; pagination incomplete")
 
 
-def classify_runs(head_sha: str, runs: list[dict]) -> tuple[str, list[str]]:
-    """Evaluate latest run of each workflow at *current* branch HEAD only."""
+def list_workflow_paths(base: str, branch: str) -> list[str]:
+    """List committed workflow definitions, even if not run on HEAD."""
+    url = base + "/contents/.github/workflows?ref=" + urllib.parse.quote(branch, safe="")
+    try:
+        entries = get_json(url)
+    except urllib.error.HTTPError as exc:
+        if exc.code == 404:
+            return []
+        raise
+    if not isinstance(entries, list):
+        raise ValueError("Unexpected workflows directory payload")
+    return sorted(
+        entry["path"] for entry in entries
+        if entry.get("type") == "file"
+        and entry.get("name", "").endswith((".yml", ".yaml"))
+    )
+
+
+def classify_runs(
+    head_sha: str,
+    runs: list[dict],
+    expected_workflows: list[str] | None = None,
+) -> tuple[str, list[str]]:
+    """Classify current-HEAD workflow runs; never treat skipped workflows as green."""
+    expected = set(expected_workflows) if expected_workflows is not None else None
+    if expected is not None and not expected:
+        return "uncovered", []
     if not runs:
         return "uncovered", []
-    current = [r for r in runs if r.get("head_sha") == head_sha]
+    current = [run for run in runs if run.get("head_sha") == head_sha]
     if not current:
         return "stale", []
     latest: dict[str, dict] = {}
-    for run in current:  # API returns newest first; still sort by run number.
-        key = str(run.get("workflow_id") or run.get("name") or run.get("id"))
-        prev = latest.get(key)
+    for run in current:
+        key = str(run.get("path") or run.get("workflow_id")
+                  or run.get("name") or run.get("id"))
+        previous = latest.get(key)
         score = (run.get("run_number", 0), run.get("run_attempt", 0))
-        if prev is None or score > (prev.get("run_number", 0), prev.get("run_attempt", 0)):
+        if previous is None or score > (
+            previous.get("run_number", 0),
+            previous.get("run_attempt", 0),
+        ):
             latest[key] = run
-    failures = [str(r.get("name") or r.get("workflow_id")) for r in latest.values()
-                if r.get("conclusion") in UNHEALTHY]
-    if failures:
-        return "failure", sorted(failures)
-    if any(r.get("status") != "completed" or r.get("conclusion") is None for r in latest.values()):
-        return "pending", []
-    if any(r.get("conclusion") != "success" for r in latest.values()):
-        return "incomplete", []
-    return "success", []
 
+    failures = sorted(
+        str(run.get("name") or run.get("workflow_id"))
+        for run in latest.values() if run.get("conclusion") in UNHEALTHY
+    )
+    if failures:
+        return "failure", failures
+    if any(run.get("status") != "completed" or run.get("conclusion") is None
+           for run in latest.values()):
+        return "pending", []
+    if any(run.get("conclusion") != "success" for run in latest.values()):
+        return "incomplete", []
+    if expected is not None:
+        missing = sorted(expected - set(latest))
+        if missing:
+            return "partial", missing
+    return "success", []
 
 def inspect(repo: dict) -> dict:
     name = repo["full_name"]
@@ -79,9 +116,15 @@ def inspect(repo: dict) -> dict:
         sha = ref["object"]["sha"]
         payload = get_json(base + "/actions/runs?branch=" + urllib.parse.quote(branch)
                            + "&per_page=100")
-        status, failing = classify_runs(sha, payload.get("workflow_runs", []))
-        return {"repo": name, "branch": branch, "sha": sha, "status": status,
-                "failed_workflows": failing, "url": f"https://github.com/{name}/actions"}
+        expected = list_workflow_paths(base, branch)
+        status, details = classify_runs(sha, payload.get("workflow_runs", []), expected)
+        return {
+            "repo": name, "branch": branch, "sha": sha, "status": status,
+            "expected_workflows": expected,
+            "failed_workflows": details if status == "failure" else [],
+            "missing_workflows": details if status == "partial" else [],
+            "url": f"https://github.com/{name}/actions",
+        }
     except (OSError, ValueError, KeyError, TypeError) as exc:
         return {"repo": name, "branch": branch, "status": "error",
                 "error": str(exc), "url": f"https://github.com/{name}/actions"}
@@ -97,25 +140,27 @@ def render_report(owner: str, results: list[dict]) -> str:
         "",
         f"Repositories: {len(results)}. " + ", ".join(
             f"{key}: {counts[key]}" for key in
-            ("success", "failure", "pending", "incomplete", "stale", "uncovered", "error")
+            ("success", "failure", "pending", "incomplete", "partial", "stale", "uncovered", "error")
         ),
         "",
         "| Repository | HEAD coverage | Details |",
         "|---|---|---|",
     ]
     for r in results:
-        detail = ", ".join(r.get("failed_workflows", [])) or r.get("error", "") or "-"
+        detail = ", ".join(r.get("failed_workflows", []) or r.get("missing_workflows", [])) or r.get("error", "") or "-"
         detail = detail.replace("|", "/").replace("\n", " ")[:160]
         lines.append(f"| [{r['repo']}]({r['url']}) | {r['status']} | {detail} |")
     lines += [
         "",
-        "Meaning: **success** = all detected current-HEAD workflows passed; "
+        "Meaning: **success** = every committed workflow has a successful run on current HEAD; "
         "**failure** = at least one current-HEAD workflow failed; "
         "**pending/incomplete** = no confirmed all-green outcome; "
+        "**partial** = at least one committed workflow has no current-HEAD run; "
         "**stale** = runs exist but no run for current HEAD; "
         "**uncovered** = no Actions runs returned; "
         "**error** = API evaluation failed.",
         "",
+        "Manual-only or path-scoped checks without current-HEAD runs are partial, not green. "
         "This audit does not run all archived-project tests or guarantee that each repo "
         "has comprehensive CI coverage. Private repositories are not included.",
         "",
