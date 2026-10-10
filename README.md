@@ -26,6 +26,8 @@ Each consolidated project keeps its own files and a `SOURCE_REPOSITORY.md` prove
 >
 > Portfolio governance: see [docs/portfolio-governance.md](docs/portfolio-governance.md) for the metadata contract and automated cross-repository audit.
 >
+> CI merge-protection checklist: see [docs/required-ci-status-checks.md](docs/required-ci-status-checks.md) for repository-specific required checks and administrator setup.
+>
 > Curriculum and portfolio alignment: see [docs/modern-ie-or-curriculum-and-portfolio-alignment.md](docs/modern-ie-or-curriculum-and-portfolio-alignment.md) for the modern IE/OR curriculum, cross-repository coverage, scope decisions, and portfolio priorities.
 
 A practical, concept-first guide to classifying optimization models and algorithms without mixing independent concepts.
