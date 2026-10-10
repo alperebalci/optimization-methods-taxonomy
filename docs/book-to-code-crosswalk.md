@@ -22,6 +22,27 @@ This is a **topic-to-implementation index**, not a claim that every chapter has 
 | GPU-accelerated first-order LP | Partial | [Matrix-free CPU PDHG LP](https://github.com/alperebalci/computational-optimization-methods/tree/main/projects/matrix-free-pdhg-large-scale-linear-programming-python) | No GPU kernel or validated GPU speedup |
 | Orchestrated agentic decision workflow | Partial | [LLM for Mathematical Optimization](https://github.com/alperebalci/llm-for-mathematical-optimization) | Do not equate model generation with governed agent orchestration |
 
+## Decision science and Management Science companion layer
+
+The book is not claimed to contain new chapters on these subjects. The links below make the surrounding decision-intelligence workflow visible without altering the book PDF.
+
+| Method | Status | Reproducible starting point | Boundary |
+|---|---|---|---|
+| Expected utility, risk attitude and EVPI | Implemented | [Capacity-expansion flagship](https://github.com/alperebalci/management-science/tree/main/case-studies/flagships/decision-analysis-capacity-expansion) | Synthetic financial payoffs; assumes elicited scenario probabilities and CARA risk tolerance |
+| Imperfect information and Bayesian EVSI | Implemented | [Decision-science flagship](https://github.com/alperebalci/management-science/tree/main/case-studies/flagships/decision-science-preferences-and-information) | Finite signals, prior supplied, risk-neutral value of information |
+| AHP, group criteria judgments, MAVT and TOPSIS | Implemented at educational scale | [Decision-science flagship](https://github.com/alperebalci/management-science/tree/main/case-studies/flagships/decision-science-preferences-and-information) | Not a comprehensive ANP/BWM/ELECTRE/PROMETHEE/MAUT platform; no real expert study |
+| Deep uncertainty scenario screening | Partial | [Scenario aspiration and regret profiles](https://github.com/alperebalci/management-science/tree/main/case-studies/flagships/decision-science-preferences-and-information) | Scenario coverage is not a probability or a complete RDM/info-gap/real-options workflow |
+| Decision problem framing | Implemented | [Frame and universal sequential model](https://github.com/alperebalci/decision-framing-and-sequential-decision-modeling) | Traceability framework, not proof of causal adequacy |
+| DMN-inspired decision rules and influence diagrams | Partial | [Decision governance primitives](https://github.com/alperebalci/decision-framing-and-sequential-decision-modeling/blob/main/docs/07-decision-rules-governance-and-influence.md) | Bounded rule semantics and DAG audit; no FEEL/DMN standard engine or causal identification |
+| Human overrides and descriptive decision governance | Partial | [Governance example](https://github.com/alperebalci/decision-framing-and-sequential-decision-modeling/blob/main/examples/governance_case.py) | Not identity authorization, immutable event storage, calibrated trust or causal value estimation |
+| DEA / relative efficiency | Implemented | [CCR/BCC DEA](https://github.com/alperebalci/resource-allocation-optimization/tree/main/projects/data-envelopment-analysis-efficiency) | Neither SFA nor causal efficiency measurement |
+| Behavioral decision making | Implemented at educational scale | [Behavioral newsvendor/anchoring](https://github.com/alperebalci/inventory-optimization-and-control/tree/main/projects/behavioral-operations-and-human-decision-making) | Does not implement a full prospect-theory or human-AI trust/aversion study |
+| Project risk, selection and scheduling | Implemented | [CPM/PERT and budgeted selection](https://github.com/alperebalci/classical-scheduling-optimization/tree/main/projects/project-portfolio-and-project-scheduling) | Does not imply strategic R&D real-options or full multi-period resource uncertainty |
+| Demand/choice models | Implemented at educational scale | [MNL discrete choice](https://github.com/alperebalci/pricing-and-revenue-optimization/tree/main/projects/empirical-operations-and-demand-modeling) | CLV/churn/conjoint and uplift estimation are not established by MNL |
+| System dynamics and agent-based simulation | Implemented | [Stock-flow feedback](https://github.com/alperebalci/robust-and-adaptive-supply-chain-optimization/tree/main/projects/system-dynamics-for-operations), [agent-based supply chain](https://github.com/alperebalci/robust-and-adaptive-supply-chain-optimization/tree/main/projects/agent-based-supply-chain-simulation-python) | Stylized simulation, not validated organizational policy impact |
+
+See [decision-science and management coverage audit](decision-science-and-management-coverage-2026-10.md) for the remaining scope choices and evidence standard.
+
 ## Practical use
 
 Follow the linked READMEs for dependencies, benchmark assumptions, and tests. A consolidated project is **not** a new independent top-level repo. When adding a new project, update this crosswalk with the concrete implementation path, a reproducible command, the claim supported by tests, and the explicit limit of the claim.
