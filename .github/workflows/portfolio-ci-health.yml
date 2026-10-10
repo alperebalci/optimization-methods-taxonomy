@@ -1,0 +1,50 @@
+name: Cross-repository CI health
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/audit_github_ci.py"
+      - "tests/test_audit_github_ci.py"
+      - ".github/workflows/portfolio-ci-health.yml"
+  pull_request:
+    paths:
+      - "scripts/audit_github_ci.py"
+      - "tests/test_audit_github_ci.py"
+      - ".github/workflows/portfolio-ci-health.yml"
+  schedule:
+    - cron: "23 8 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate audit classification independently of network
+        run: python -m unittest discover -s tests -p test_audit_github_ci.py -v
+      - name: Inspect current default-branch checks across public repos
+        run: |
+          set +e
+          python scripts/audit_github_ci.py --owner alperebalci --output reports/ci-health.json --summary reports/ci-health.md
+          status=$?
+          if [ -f reports/ci-health.md ]; then
+            cat reports/ci-health.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+          exit "$status"
+      - name: Preserve machine-readable CI evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-ci-health
+          path: reports/ci-health.*
+          if-no-files-found: warn
