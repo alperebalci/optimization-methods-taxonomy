@@ -27,7 +27,7 @@ def render(catalog: dict) -> str:
     for group, items in groups.items():
         lines.extend([f"## {group}", "", "| Repository | Axis | Area |", "|---|---|---|"])
         for item in sorted(items, key=lambda x: x["title"].lower()):
-            url = f"https://github.com/{catalog['owner']}/{item['repository']}"
+            url = f"https://github.com/{catalog.get('github_owner', catalog['owner'])}/{item['repository']}"
             lines.append(f"| [{item['title']}]({url}) | `{item['axis']}` | `{item['area']}` |")
         lines.append("")
 

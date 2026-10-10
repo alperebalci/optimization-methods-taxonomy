@@ -65,12 +65,69 @@ def parse_portfolio_yaml(text: str) -> tuple[dict[str, str], list[str]]:
     return scalars, projects
 
 
-def validate(catalog_path: Path, map_path: Path) -> int:
+
+def validate_sources(catalog: dict, registry: dict) -> list[str]:
+    """Pure, offline parity checks: both generated views must share an inventory."""
+    errors: list[str] = []
+    for field in ("schema_version", "owner"):
+        if catalog.get(field) != registry.get(field):
+            errors.append(f"catalog/registry {field} mismatch")
+    cat_owner = catalog.get("github_owner", catalog.get("owner"))
+    reg_owner = registry.get("github_owner", registry.get("owner"))
+    if cat_owner != reg_owner:
+        errors.append("catalog/registry canonical GitHub owner mismatch")
+
+    slugs = [item["repository"] for item in catalog["repositories"]]
+    seen: set[str] = set()
+    for slug in slugs:
+        if slug in seen:
+            errors.append(f"{slug}: duplicate catalog entry")
+        seen.add(slug)
+    grouped: set[str] = set()
+    for dimension in ("domains", "methodologies"):
+        for group, items in registry[dimension].items():
+            if len(items) != len(set(items)):
+                errors.append(f"{dimension}/{group}: duplicate repository")
+            grouped.update(items)
+
+    for slug in sorted(grouped - seen):
+        errors.append(f"{slug}: in registry/map but missing from catalog/index")
+    for slug in sorted(seen - grouped):
+        errors.append(f"{slug}: in catalog/index but missing from registry/map")
+
+    planned = registry.get("planned_methodological_umbrellas", [])
+    if len(planned) != len(set(planned)):
+        errors.append("planned methodological gaps contain duplicates")
+    for slug in sorted(set(planned) & seen):
+        errors.append(f"{slug}: planned gap already present in active catalog")
+    for item in catalog["repositories"]:
+        if item.get("role") not in {"umbrella", "standalone", "foundation"}:
+            errors.append(f"{item['repository']}: unsupported catalog role")
+    return errors
+
+def validate(
+    catalog_path: Path,
+    map_path: Path,
+    registry_path: Path = Path("PORTFOLIO_REGISTRY.json"),
+    *,
+    inventory_only: bool = False,
+) -> int:
     catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
+    registry = json.loads(registry_path.read_text(encoding="utf-8"))
     map_text = map_path.read_text(encoding="utf-8")
     owner = catalog["owner"]
-    errors: list[str] = []
+    github_owner = catalog.get("github_owner", owner)
+    errors: list[str] = validate_sources(catalog, registry)
     warnings: list[str] = []
+    if inventory_only:
+        for error in errors:
+            print(f"ERROR: {error}", file=sys.stderr)
+        print(f"Catalog/registry inventory: {len(catalog['repositories'])} repositories, {len(errors)} error(s).")
+        return 1 if errors else 0
+    if errors:
+        for error in errors:
+            print(f"ERROR: {error}", file=sys.stderr)
+        return 1
     required = {"schema_version", "repository", "role", "axis", "area", "status", "owner"}
     seen: set[str] = set()
 
@@ -81,7 +138,7 @@ def validate(catalog_path: Path, map_path: Path) -> int:
             errors.append(f"{repo}: duplicate catalog entry")
             continue
         seen.add(repo)
-        raw_base = f"https://raw.githubusercontent.com/{owner}/{repo}/{branch}"
+        raw_base = f"https://raw.githubusercontent.com/{github_owner}/{repo}/{branch}"
         try:
             metadata_text = fetch_text(f"{raw_base}/PORTFOLIO.yaml")
         except RuntimeError as exc:
@@ -110,9 +167,9 @@ def validate(catalog_path: Path, map_path: Path) -> int:
                 errors.append(f"{repo}: missing portfolio-umbrella:start marker")
             if "<!-- portfolio-umbrella:end -->" not in readme:
                 errors.append(f"{repo}: missing portfolio-umbrella:end marker")
-        if not projects:
+        if item["role"] == "umbrella" and not projects:
             warnings.append(f"{repo}: metadata currently lists no projects; verify whether this should remain an umbrella")
-        expected_link = f"https://github.com/{owner}/{repo}"
+        expected_link = f"https://github.com/{github_owner}/{repo}"
         if expected_link not in map_text:
             errors.append(f"{repo}: missing from PORTFOLIO_MAP.md")
 
@@ -128,8 +185,10 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--catalog", type=Path, default=Path("portfolio/catalog.json"))
     parser.add_argument("--map", dest="map_path", type=Path, default=Path("PORTFOLIO_MAP.md"))
+    parser.add_argument("--registry", type=Path, default=Path("PORTFOLIO_REGISTRY.json"))
+    parser.add_argument("--inventory-only", action="store_true", help="Check local inventory without network.")
     args = parser.parse_args()
-    return validate(args.catalog, args.map_path)
+    return validate(args.catalog, args.map_path, args.registry, inventory_only=args.inventory_only)
 
 
 if __name__ == "__main__":

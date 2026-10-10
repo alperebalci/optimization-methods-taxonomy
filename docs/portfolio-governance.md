@@ -113,11 +113,16 @@ python scripts/portfolio_governance.py
 
 7. Keep native and consolidated project status explicit.
 
-## Current intentional gaps
+## Inventory parity and canonical GitHub links
 
-The portfolio currently has strong application-level robust optimization work and several decomposition implementations, but two method families still merit dedicated top-level umbrellas when repositories are created:
+The portfolio has two complementary sources: `PORTFOLIO_REGISTRY.json` (many-to-many navigation) and `portfolio/catalog.json` (one record per governed repository). Both must contain **exactly the same set of repository slugs**. Duplicate catalog records, missing entries in either direction, and duplicate entries within a map group fail the offline audit.
 
-- robust and distributionally robust optimization;
-- decomposition and large-scale optimization beyond Benders alone.
+Run `python scripts/portfolio_governance.py --inventory-only` before network-dependent repository checks. The workflow also checks the generated map/index and runs unit tests. Standalone and foundation repositories are allowed as catalog entries; the umbrella project-list warning applies only to umbrellas.
 
-Until those repositories exist, related implementations remain discoverable through their current domain umbrellas and the curated portfolio map.
+`owner` is the historical metadata owner declared in existing `PORTFOLIO.yaml` files; `github_owner` is the current canonical link/fetch owner. These are deliberately separate until repository-local metadata is migrated consistently. Currently the public `jorsacademy` namespace redirects to `alperebalci`, so generated browser links and live audits use `github_owner=alperebalci`.
+
+## Current research extensions
+
+Dedicated `decomposition-and-large-scale-optimization` and `robust-and-distributionally-robust-optimization` repositories now exist; they must not be listed as missing. The planned methodological gaps in the registry are future **capability** targets, not claims that the broad topic is absent. Prioritize verified experiments inside existing repositories before creating another umbrella.
+
+See [the coverage audit](portfolio-coverage-audit-2026-10.md) and [book-to-code crosswalk](book-to-code-crosswalk.md) for scoped evidence and next steps.

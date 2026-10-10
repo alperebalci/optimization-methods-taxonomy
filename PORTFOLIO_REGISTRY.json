@@ -79,10 +79,22 @@
       "resource-allocation-optimization"
     ],
     "Prescriptive Decision Systems and Closed-Loop Control": [
+      "decision-framing-and-sequential-decision-modeling",
       "production-planning-optimization",
       "sequential-decision-analytics",
       "industrial-reinforcement-learning"
+    ],
+    "Statistical Quality, Forecasting and Empirical Methods": [
+      "time-series-intelligence",
+      "manufacturing-systems-optimization",
+      "pricing-and-revenue-optimization"
     ]
   },
-  "planned_methodological_umbrellas": []
+  "planned_methodological_umbrellas": [
+    "advanced-bilevel-and-equilibrium-optimization",
+    "simulation-input-modeling-and-variance-reduction",
+    "optimization-decision-services-and-observability",
+    "gpu-accelerated-first-order-optimization"
+  ],
+  "github_owner": "alperebalci"
 }

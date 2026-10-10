@@ -26,7 +26,7 @@ def title_from_slug(slug: str) -> str:
 
 
 def render(registry: dict) -> str:
-    owner = registry["owner"]
+    owner = registry.get("github_owner", registry["owner"])
     lines = [
         "# Jors Academy Optimization Portfolio Map",
         "",
@@ -70,7 +70,7 @@ def render(registry: dict) -> str:
         lines.append(f"- `{slug}`")
     lines += [
         "",
-        "These entries are planning targets only; they should become top-level umbrellas when dedicated repositories are created.",
+        "These are research directions, not claims of completed work or commitments to create separate repositories. Extend an existing umbrella first; a new top-level umbrella requires multiple substantial implementations.",
         "",
     ]
     return "\n".join(lines)
