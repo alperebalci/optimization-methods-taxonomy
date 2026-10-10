@@ -2,19 +2,8 @@ name: Portfolio Governance
 
 on:
   push:
-    paths:
-      - "PORTFOLIO_MAP.md"
-      - "portfolio/**"
-      - "scripts/portfolio_governance.py"
-      - "docs/portfolio-governance.md"
-      - ".github/workflows/portfolio-governance.yml"
+    branches: [main]
   pull_request:
-    paths:
-      - "PORTFOLIO_MAP.md"
-      - "portfolio/**"
-      - "scripts/portfolio_governance.py"
-      - "docs/portfolio-governance.md"
-      - ".github/workflows/portfolio-governance.yml"
   schedule:
     - cron: "17 5 * * *"
   workflow_dispatch:
