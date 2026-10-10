@@ -38,6 +38,31 @@ class CIHealthTests(unittest.TestCase):
             "incomplete",
         )
 
+    def test_skipped_committed_workflow_is_partial(self):
+        current = [dict(entry("abc", 1, "Unit"), path=".github/workflows/unit.yml")]
+        self.assertEqual(
+            classify_runs("abc", current, [
+                ".github/workflows/unit.yml", ".github/workflows/integration.yml",
+            ]),
+            ("partial", [".github/workflows/integration.yml"]),
+        )
+
+    def test_all_committed_workflows_must_pass(self):
+        current = [
+            dict(entry("abc", 1, "Unit"), path=".github/workflows/unit.yml"),
+            dict(entry("abc", 2, "Integration"), path=".github/workflows/integration.yml"),
+        ]
+        self.assertEqual(
+            classify_runs("abc", current, [
+                ".github/workflows/unit.yml", ".github/workflows/integration.yml",
+            ]),
+            ("success", []),
+        )
+
+    def test_no_workflows_in_tree_is_not_green(self):
+        self.assertEqual(classify_runs("abc", [entry("abc", 1, "old")], []),
+                         ("uncovered", []))
+
     def test_report_marks_uncovered_explicitly(self):
         result = {"repo": "alice/not-tested", "status": "uncovered",
                   "url": "https://github.com/alice/not-tested/actions"}
