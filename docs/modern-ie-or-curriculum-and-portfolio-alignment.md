@@ -130,3 +130,10 @@ A modern IE/OR capstone should be considered complete only when it contains:
 - a limitations section that distinguishes synthetic evidence from real-world claims.
 
 The objective is to graduate engineers who can connect rigorous optimization with data, computation, experimentation, and implementation in complex sociotechnical systems.
+
+
+## October 2026 evidence reconciliation
+
+A repository-title-only assessment understates the implementation coverage of this portfolio. Concrete queueing, discrete-event simulation, SPC/DOE, causal experimentation, market design, Stackelberg/interdiction, CP-SAT, facility layout, MPC, and CPU first-order LP examples already exist in root packages or `projects/`.
+
+See [the book-to-code crosswalk](book-to-code-crosswalk.md) for exact code paths, and [the coverage audit](portfolio-coverage-audit-2026-10.md) for validation boundaries. Existing coverage does **not** imply research-grade generality: advanced bilevel/MPEC, simulation input distribution fitting and broader variance reduction, production deployment/observability, and genuine GPU kernels are expansion opportunities. Those are tracked as planned research directions, not fabricated implementations. Site names and repository slugs are navigational evidence, not independent reproduction of every numerical claim.

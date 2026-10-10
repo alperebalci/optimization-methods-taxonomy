@@ -30,6 +30,10 @@ Each consolidated project keeps its own files and a `SOURCE_REPOSITORY.md` prove
 >
 > Curriculum and portfolio alignment: see [docs/modern-ie-or-curriculum-and-portfolio-alignment.md](docs/modern-ie-or-curriculum-and-portfolio-alignment.md) for the modern IE/OR curriculum, cross-repository coverage, scope decisions, and portfolio priorities.
 >
+> Book-to-code crosswalk: see [docs/book-to-code-crosswalk.md](docs/book-to-code-crosswalk.md) for verified implementations corresponding to the book's topics, with explicitly marked gaps.
+>
+> Coverage audit: see [docs/portfolio-coverage-audit-2026-10.md](docs/portfolio-coverage-audit-2026-10.md) for the evidence-backed review of IE/OR methods and remaining priorities.
+>
 > University research crosswalk (2026/27): see [docs/2026-university-ie-or-research-crosswalk.md](docs/2026-university-ie-or-research-crosswalk.md) for official curriculum references, evidence gaps, completion criteria, and the twelve-week implementation order.
 
 A practical, concept-first guide to classifying optimization models and algorithms without mixing independent concepts.

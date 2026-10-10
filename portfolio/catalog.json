@@ -57,11 +57,38 @@
       "default_branch": "main"
     },
     {
+      "repository": "constraint-learning-for-industrial-engineering",
+      "title": "Constraint Learning for Industrial Engineering",
+      "axis": "standalone",
+      "area": "constraint-learning",
+      "group": "Learning and optimization",
+      "role": "standalone",
+      "default_branch": "main"
+    },
+    {
       "repository": "decision-focused-learning-and-differentiable-optimization",
       "title": "Decision-Focused Learning and Differentiable Optimization",
       "axis": "methodology",
       "area": "decision-focused-learning",
       "group": "Learning and optimization",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "decision-framing-and-sequential-decision-modeling",
+      "title": "Decision Framing and Sequential Decision Modeling",
+      "axis": "methodology",
+      "area": "decision-framing-and-sequential-decision-modeling",
+      "group": "Optimization foundations and methods",
+      "role": "foundation",
+      "default_branch": "main"
+    },
+    {
+      "repository": "decomposition-and-large-scale-optimization",
+      "title": "Decomposition and Large-Scale Optimization",
+      "axis": "methodology",
+      "area": "decomposition-large-scale-optimization",
+      "group": "Optimization foundations and methods",
       "role": "umbrella",
       "default_branch": "main"
     },
@@ -237,6 +264,15 @@
       "default_branch": "main"
     },
     {
+      "repository": "performative-optimization",
+      "title": "Performative Optimization",
+      "axis": "standalone",
+      "area": "performative-optimization",
+      "group": "Learning and optimization",
+      "role": "standalone",
+      "default_branch": "main"
+    },
+    {
       "repository": "pricing-and-revenue-optimization",
       "title": "Pricing and Revenue Optimization",
       "axis": "application",
@@ -291,6 +327,15 @@
       "default_branch": "main"
     },
     {
+      "repository": "robust-and-distributionally-robust-optimization",
+      "title": "Robust and Distributionally Robust Optimization",
+      "axis": "methodology",
+      "area": "robust-distributionally-robust-optimization",
+      "group": "Optimization foundations and methods",
+      "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
       "repository": "sequential-decision-analytics",
       "title": "Sequential Decision Analytics",
       "axis": "methodology",
@@ -324,6 +369,15 @@
       "area": "supply-chain-network",
       "group": "Operations and supply chain",
       "role": "umbrella",
+      "default_branch": "main"
+    },
+    {
+      "repository": "time-series-intelligence",
+      "title": "Time Series Intelligence",
+      "axis": "standalone",
+      "area": "time-series",
+      "group": "Statistical and empirical decision methods",
+      "role": "standalone",
       "default_branch": "main"
     },
     {
@@ -362,5 +416,6 @@
       "role": "umbrella",
       "default_branch": "main"
     }
-  ]
+  ],
+  "github_owner": "alperebalci"
 }

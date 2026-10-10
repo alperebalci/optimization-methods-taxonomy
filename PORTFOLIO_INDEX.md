@@ -8,71 +8,82 @@ This index is the deterministic machine-generated companion to the curated `PORT
 
 | Repository | Axis | Area |
 |---|---|---|
-| [Aviation Operations Optimization](https://github.com/jorsacademy/aviation-operations-optimization) | `application` | `aviation` |
-| [Mission Planning Optimization](https://github.com/jorsacademy/mission-planning-optimization) | `application` | `mission-planning` |
-| [Transportation and Mobility Optimization](https://github.com/jorsacademy/transportation-and-mobility-optimization) | `application` | `transportation-mobility` |
+| [Aviation Operations Optimization](https://github.com/alperebalci/aviation-operations-optimization) | `application` | `aviation` |
+| [Mission Planning Optimization](https://github.com/alperebalci/mission-planning-optimization) | `application` | `mission-planning` |
+| [Transportation and Mobility Optimization](https://github.com/alperebalci/transportation-and-mobility-optimization) | `application` | `transportation-mobility` |
 
 ## Finance and revenue
 
 | Repository | Axis | Area |
 |---|---|---|
-| [Banking and Financial Services Optimization](https://github.com/jorsacademy/banking-and-financial-services-optimization) | `application` | `banking-financial-services` |
-| [Derivatives Pricing, Hedging and XVA](https://github.com/jorsacademy/derivatives-pricing-hedging-and-xva) | `application` | `derivatives-xva` |
-| [Machine Learning in Finance Course](https://github.com/jorsacademy/machine-learning-in-finance-course) | `application` | `machine-learning-finance` |
-| [Pricing and Revenue Optimization](https://github.com/jorsacademy/pricing-and-revenue-optimization) | `application` | `pricing-revenue` |
-| [Quantitative Trading and Market Microstructure Optimization](https://github.com/jorsacademy/quantitative-trading-and-market-microstructure-optimization) | `application` | `quantitative-trading` |
+| [Banking and Financial Services Optimization](https://github.com/alperebalci/banking-and-financial-services-optimization) | `application` | `banking-financial-services` |
+| [Derivatives Pricing, Hedging and XVA](https://github.com/alperebalci/derivatives-pricing-hedging-and-xva) | `application` | `derivatives-xva` |
+| [Machine Learning in Finance Course](https://github.com/alperebalci/machine-learning-in-finance-course) | `application` | `machine-learning-finance` |
+| [Pricing and Revenue Optimization](https://github.com/alperebalci/pricing-and-revenue-optimization) | `application` | `pricing-revenue` |
+| [Quantitative Trading and Market Microstructure Optimization](https://github.com/alperebalci/quantitative-trading-and-market-microstructure-optimization) | `application` | `quantitative-trading` |
 
 ## Optimization foundations and methods
 
 | Repository | Axis | Area |
 |---|---|---|
-| [Bayesian and Black-Box Optimization](https://github.com/jorsacademy/bayesian-and-black-box-optimization) | `methodology` | `bayesian-black-box-optimization` |
-| [Benders Decomposition Methods](https://github.com/jorsacademy/benders-decomposition-methods) | `methodology` | `benders-decomposition` |
-| [Computational Optimization Methods](https://github.com/jorsacademy/computational-optimization-methods) | `methodology` | `computational-optimization` |
-| [Inverse Optimization](https://github.com/jorsacademy/inverse-optimization) | `methodology` | `inverse-optimization` |
-| [Optimization Methods Taxonomy](https://github.com/jorsacademy/optimization-methods-taxonomy) | `methodology` | `optimization-taxonomy` |
-| [Sequential Decision Analytics](https://github.com/jorsacademy/sequential-decision-analytics) | `methodology` | `sequential-decision-analytics` |
-| [Simulation Optimization and Uncertainty Quantification](https://github.com/jorsacademy/simulation-optimization-and-uncertainty-quantification) | `methodology` | `simulation-optimization-uq` |
-| [Stochastic Programming Methods](https://github.com/jorsacademy/stochastic-programming-methods) | `methodology` | `stochastic-programming` |
+| [Bayesian and Black-Box Optimization](https://github.com/alperebalci/bayesian-and-black-box-optimization) | `methodology` | `bayesian-black-box-optimization` |
+| [Benders Decomposition Methods](https://github.com/alperebalci/benders-decomposition-methods) | `methodology` | `benders-decomposition` |
+| [Computational Optimization Methods](https://github.com/alperebalci/computational-optimization-methods) | `methodology` | `computational-optimization` |
+| [Decision Framing and Sequential Decision Modeling](https://github.com/alperebalci/decision-framing-and-sequential-decision-modeling) | `methodology` | `decision-framing-and-sequential-decision-modeling` |
+| [Decomposition and Large-Scale Optimization](https://github.com/alperebalci/decomposition-and-large-scale-optimization) | `methodology` | `decomposition-large-scale-optimization` |
+| [Inverse Optimization](https://github.com/alperebalci/inverse-optimization) | `methodology` | `inverse-optimization` |
+| [Optimization Methods Taxonomy](https://github.com/alperebalci/optimization-methods-taxonomy) | `methodology` | `optimization-taxonomy` |
+| [Robust and Distributionally Robust Optimization](https://github.com/alperebalci/robust-and-distributionally-robust-optimization) | `methodology` | `robust-distributionally-robust-optimization` |
+| [Sequential Decision Analytics](https://github.com/alperebalci/sequential-decision-analytics) | `methodology` | `sequential-decision-analytics` |
+| [Simulation Optimization and Uncertainty Quantification](https://github.com/alperebalci/simulation-optimization-and-uncertainty-quantification) | `methodology` | `simulation-optimization-uq` |
+| [Stochastic Programming Methods](https://github.com/alperebalci/stochastic-programming-methods) | `methodology` | `stochastic-programming` |
 
 ## Operations and supply chain
 
 | Repository | Axis | Area |
 |---|---|---|
-| [Classical Scheduling Optimization](https://github.com/jorsacademy/classical-scheduling-optimization) | `problem-class` | `scheduling` |
-| [Inventory Optimization and Control](https://github.com/jorsacademy/inventory-optimization-and-control) | `problem-class` | `inventory` |
-| [Location and Spatial Optimization](https://github.com/jorsacademy/location-and-spatial-optimization) | `problem-class` | `location-spatial` |
-| [Packing and Cutting Optimization](https://github.com/jorsacademy/packing-and-cutting-optimization) | `problem-class` | `packing-cutting` |
-| [Production Planning Optimization](https://github.com/jorsacademy/production-planning-optimization) | `problem-class` | `production-planning` |
-| [Resource Allocation Optimization](https://github.com/jorsacademy/resource-allocation-optimization) | `problem-class` | `resource-allocation` |
-| [Robust and Adaptive Supply Chain Optimization](https://github.com/jorsacademy/robust-and-adaptive-supply-chain-optimization) | `application` | `robust-supply-chain` |
-| [Supply Chain Network Optimization](https://github.com/jorsacademy/supply-chain-network-optimization) | `application` | `supply-chain-network` |
-| [Vehicle Routing Optimization](https://github.com/jorsacademy/vehicle-routing-optimization) | `problem-class` | `vehicle-routing` |
-| [Warehouse and Terminal Optimization](https://github.com/jorsacademy/warehouse-and-terminal-optimization) | `application` | `warehouse-terminal` |
-| [Workforce Optimization and Analytics](https://github.com/jorsacademy/workforce-optimization-and-analytics) | `problem-class` | `workforce` |
+| [Classical Scheduling Optimization](https://github.com/alperebalci/classical-scheduling-optimization) | `problem-class` | `scheduling` |
+| [Inventory Optimization and Control](https://github.com/alperebalci/inventory-optimization-and-control) | `problem-class` | `inventory` |
+| [Location and Spatial Optimization](https://github.com/alperebalci/location-and-spatial-optimization) | `problem-class` | `location-spatial` |
+| [Packing and Cutting Optimization](https://github.com/alperebalci/packing-and-cutting-optimization) | `problem-class` | `packing-cutting` |
+| [Production Planning Optimization](https://github.com/alperebalci/production-planning-optimization) | `problem-class` | `production-planning` |
+| [Resource Allocation Optimization](https://github.com/alperebalci/resource-allocation-optimization) | `problem-class` | `resource-allocation` |
+| [Robust and Adaptive Supply Chain Optimization](https://github.com/alperebalci/robust-and-adaptive-supply-chain-optimization) | `application` | `robust-supply-chain` |
+| [Supply Chain Network Optimization](https://github.com/alperebalci/supply-chain-network-optimization) | `application` | `supply-chain-network` |
+| [Vehicle Routing Optimization](https://github.com/alperebalci/vehicle-routing-optimization) | `problem-class` | `vehicle-routing` |
+| [Warehouse and Terminal Optimization](https://github.com/alperebalci/warehouse-and-terminal-optimization) | `application` | `warehouse-terminal` |
+| [Workforce Optimization and Analytics](https://github.com/alperebalci/workforce-optimization-and-analytics) | `problem-class` | `workforce` |
 
 ## Learning and optimization
 
 | Repository | Axis | Area |
 |---|---|---|
-| [Decision-Focused Learning and Differentiable Optimization](https://github.com/jorsacademy/decision-focused-learning-and-differentiable-optimization) | `methodology` | `decision-focused-learning` |
-| [Graph Learning for Combinatorial Optimization](https://github.com/jorsacademy/graph-learning-combinatorial-optimization) | `methodology` | `graph-learning-combinatorial-optimization` |
-| [Industrial Reinforcement Learning](https://github.com/jorsacademy/industrial-reinforcement-learning) | `methodology` | `industrial-reinforcement-learning` |
-| [Learning-Augmented Optimization Solvers](https://github.com/jorsacademy/learning-augmented-optimization-solvers) | `methodology` | `learning-augmented-solvers` |
-| [Learning-Based Scheduling Optimization](https://github.com/jorsacademy/learning-based-scheduling-optimization) | `methodology` | `learning-based-scheduling` |
-| [LLM for Mathematical Optimization](https://github.com/jorsacademy/llm-for-mathematical-optimization) | `methodology` | `llm-mathematical-optimization` |
-| [Neural Combinatorial Optimization](https://github.com/jorsacademy/neural-combinatorial-optimization) | `methodology` | `neural-combinatorial-optimization` |
-| [Neural Optimization Methods](https://github.com/jorsacademy/neural-optimization-methods) | `methodology` | `learned-optimizers` |
+| [Constraint Learning for Industrial Engineering](https://github.com/alperebalci/constraint-learning-for-industrial-engineering) | `standalone` | `constraint-learning` |
+| [Decision-Focused Learning and Differentiable Optimization](https://github.com/alperebalci/decision-focused-learning-and-differentiable-optimization) | `methodology` | `decision-focused-learning` |
+| [Graph Learning for Combinatorial Optimization](https://github.com/alperebalci/graph-learning-combinatorial-optimization) | `methodology` | `graph-learning-combinatorial-optimization` |
+| [Industrial Reinforcement Learning](https://github.com/alperebalci/industrial-reinforcement-learning) | `methodology` | `industrial-reinforcement-learning` |
+| [Learning-Augmented Optimization Solvers](https://github.com/alperebalci/learning-augmented-optimization-solvers) | `methodology` | `learning-augmented-solvers` |
+| [Learning-Based Scheduling Optimization](https://github.com/alperebalci/learning-based-scheduling-optimization) | `methodology` | `learning-based-scheduling` |
+| [LLM for Mathematical Optimization](https://github.com/alperebalci/llm-for-mathematical-optimization) | `methodology` | `llm-mathematical-optimization` |
+| [Neural Combinatorial Optimization](https://github.com/alperebalci/neural-combinatorial-optimization) | `methodology` | `neural-combinatorial-optimization` |
+| [Neural Optimization Methods](https://github.com/alperebalci/neural-optimization-methods) | `methodology` | `learned-optimizers` |
+| [Performative Optimization](https://github.com/alperebalci/performative-optimization) | `standalone` | `performative-optimization` |
 
 ## Industrial and engineering systems
 
 | Repository | Axis | Area |
 |---|---|---|
-| [Energy Systems Optimization](https://github.com/jorsacademy/energy-systems-optimization) | `application` | `energy` |
-| [Engineering Design Optimization](https://github.com/jorsacademy/engineering-design-optimization) | `application` | `engineering-design` |
-| [Industry 4.0 Lab](https://github.com/jorsacademy/industry-4.0-lab) | `application` | `industry-4-0` |
-| [Manufacturing Systems Optimization](https://github.com/jorsacademy/manufacturing-systems-optimization) | `application` | `manufacturing` |
-| [Process Industries Optimization](https://github.com/jorsacademy/process-industries-optimization) | `application` | `process-industries` |
+| [Energy Systems Optimization](https://github.com/alperebalci/energy-systems-optimization) | `application` | `energy` |
+| [Engineering Design Optimization](https://github.com/alperebalci/engineering-design-optimization) | `application` | `engineering-design` |
+| [Industry 4.0 Lab](https://github.com/alperebalci/industry-4.0-lab) | `application` | `industry-4-0` |
+| [Manufacturing Systems Optimization](https://github.com/alperebalci/manufacturing-systems-optimization) | `application` | `manufacturing` |
+| [Process Industries Optimization](https://github.com/alperebalci/process-industries-optimization) | `application` | `process-industries` |
+
+## Statistical and empirical decision methods
+
+| Repository | Axis | Area |
+|---|---|---|
+| [Time Series Intelligence](https://github.com/alperebalci/time-series-intelligence) | `standalone` | `time-series` |
 
 ## Source of truth
 

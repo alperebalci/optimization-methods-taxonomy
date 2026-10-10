@@ -1,0 +1,29 @@
+# Decision Intelligence in Action: book-to-code crosswalk
+
+This is a **topic-to-implementation index**, not a claim that every chapter has a dedicated repository or that all implementations have been independently benchmarked. The book PDF is preserved unchanged in [Decision Intelligence in Action](https://github.com/alperebalci/decision-intelligence-in-action). This crosswalk was checked against repository READMEs and file trees on 10 October 2026.
+
+**Legend:** **Implemented** = inspectable project or module exists; **Partial** = introductory or bounded example exists, but the general capability is not yet demonstrated; **Planned** = no implementation verified for the stated advanced extension.
+
+| Book or adjacent IE/OR topic | Status | Verified code or project | Boundary |
+|---|---|---|---|
+| Constraint programming | Implemented | [CP-SAT job-shop root implementation](https://github.com/alperebalci/classical-scheduling-optimization) | CP-SAT scheduling, not a general CP language |
+| Metaheuristics | Implemented | [ALNS vehicle routing](https://github.com/alperebalci/vehicle-routing-optimization), [advanced evolutionary methods](https://github.com/alperebalci/computational-optimization-methods/tree/main/projects/advanced-evolutionary-optimization) | Benchmarks are problem-specific |
+| Multi-objective optimization | Implemented | [NSGA-II beam design](https://github.com/alperebalci/engineering-design-optimization/tree/main/projects/pymoo-multiobjective-beam-design), [multi-objective CVRP](https://github.com/alperebalci/vehicle-routing-optimization/tree/main/projects/multi-objective-cvrp-nsga2-python) | Trade-offs require decision-maker interpretation |
+| Online and real-time optimization | Implemented / partial | [Dynamic CVRPTW reoptimization](https://github.com/alperebalci/vehicle-routing-optimization/tree/main/projects/dynamic-cvrptw-online-reoptimization-python), [sequential decision analytics](https://github.com/alperebalci/sequential-decision-analytics) | No verified production real-time SLA across deployments |
+| Causal inference | Implemented | [Randomized ATE, DiD, AIPW, treatment allocation](https://github.com/alperebalci/pricing-and-revenue-optimization/tree/main/projects/causal-operations-and-experimentation) | Identification assumptions remain application-specific |
+| Model predictive control | Implemented | [QPALM-based MPC](https://github.com/alperebalci/computational-optimization-methods/tree/main/projects/qpalm-model-predictive-control-python), [MPC vs RL](https://github.com/alperebalci/industrial-reinforcement-learning/tree/main/projects/production-control-with-mpc-vs-rl) | Demonstrations do not certify safety-critical control |
+| Facility layout | Implemented | [Quadratic assignment facility layout](https://github.com/alperebalci/location-and-spatial-optimization/tree/main/projects/facility-layout-quadratic-assignment) | Equal-area discrete layout; not continuous unequal-area geometry |
+| Service systems / queueing | Implemented | [Erlang C and simulation](https://github.com/alperebalci/workforce-optimization-and-analytics/tree/main/projects/service-systems-and-queueing), [Jackson queueing networks](https://github.com/alperebalci/simulation-optimization-and-uncertainty-quantification/tree/main/projects/jackson-queueing-networks-capacity-optimization) | General networks, transient inference, and non-Poisson input models need expansion |
+| Discrete-event simulation | Implemented | [Manufacturing DES](https://github.com/alperebalci/simulation-optimization-and-uncertainty-quantification/tree/main/projects/manufacturing-discrete-event-simulation-optimization-python) | Warm-up, CRN, held-out validation and paired CIs exist; input distribution diagnostics need expansion |
+| Statistical quality and experimental design | Implemented | [Manufacturing SPC/DOE module](https://github.com/alperebalci/manufacturing-systems-optimization) | Synthetic process examples, not a deployed quality system |
+| Demand forecasting / decisions | Implemented | [Time-series models and decision-focused newsvendor evaluation](https://github.com/alperebalci/time-series-intelligence) | Macroeconomic/time-series and synthetic demand fixtures |
+| Game theory and mechanism design | Implemented | [Stackelberg/interdiction](https://github.com/alperebalci/resource-allocation-optimization/tree/main/projects/adversarial-game-theoretic-optimization), [VCG and matching](https://github.com/alperebalci/resource-allocation-optimization/tree/main/projects/market-design-mechanism-design-and-incentives) | General KKT/MPEC and equilibrium solution methods remain partial |
+| Closed-loop optimization in operations | Partial | [Production decision system](https://github.com/alperebalci/production-planning-optimization/tree/main/projects/closed-loop-production-decision-system) | Data contracts, fallback, feedback exist; persistent API/service observability not established |
+| GPU-accelerated first-order LP | Partial | [Matrix-free CPU PDHG LP](https://github.com/alperebalci/computational-optimization-methods/tree/main/projects/matrix-free-pdhg-large-scale-linear-programming-python) | No GPU kernel or validated GPU speedup |
+| Orchestrated agentic decision workflow | Partial | [LLM for Mathematical Optimization](https://github.com/alperebalci/llm-for-mathematical-optimization) | Do not equate model generation with governed agent orchestration |
+
+## Practical use
+
+Follow the linked READMEs for dependencies, benchmark assumptions, and tests. A consolidated project is **not** a new independent top-level repo. When adding a new project, update this crosswalk with the concrete implementation path, a reproducible command, the claim supported by tests, and the explicit limit of the claim.
+
+For remaining priorities and acceptance criteria, see [the portfolio coverage audit](portfolio-coverage-audit-2026-10.md).
