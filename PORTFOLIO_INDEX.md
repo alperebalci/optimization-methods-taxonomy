@@ -79,6 +79,12 @@ This index is the deterministic machine-generated companion to the curated `PORT
 | [Manufacturing Systems Optimization](https://github.com/alperebalci/manufacturing-systems-optimization) | `application` | `manufacturing` |
 | [Process Industries Optimization](https://github.com/alperebalci/process-industries-optimization) | `application` | `process-industries` |
 
+## Management and decision science
+
+| Repository | Axis | Area |
+|---|---|---|
+| [Management Science](https://github.com/alperebalci/management-science) | `application` | `management-science` |
+
 ## Statistical and empirical decision methods
 
 | Repository | Axis | Area |

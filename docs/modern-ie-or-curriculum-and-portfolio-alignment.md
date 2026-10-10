@@ -137,3 +137,15 @@ The objective is to graduate engineers who can connect rigorous optimization wit
 A repository-title-only assessment understates the implementation coverage of this portfolio. Concrete queueing, discrete-event simulation, SPC/DOE, causal experimentation, market design, Stackelberg/interdiction, CP-SAT, facility layout, MPC, and CPU first-order LP examples already exist in root packages or `projects/`.
 
 See [the book-to-code crosswalk](book-to-code-crosswalk.md) for exact code paths, and [the coverage audit](portfolio-coverage-audit-2026-10.md) for validation boundaries. Existing coverage does **not** imply research-grade generality: advanced bilevel/MPEC, simulation input distribution fitting and broader variance reduction, production deployment/observability, and genuine GPU kernels are expansion opportunities. Those are tracked as planned research directions, not fabricated implementations. Site names and repository slugs are navigational evidence, not independent reproduction of every numerical claim.
+
+
+## Normative, behavioral and organizational decision science (October 2026)
+
+The curriculum now has an explicit companion crosswalk for methods that do not reduce to mathematical optimization alone. Read the [decision-science and management coverage review](decision-science-and-management-coverage-2026-10.md) for evidence and scoped implementation status.
+
+- `decision-framing-and-sequential-decision-modeling` defines decision makers, information timing, model traceability, decision tables, structural influence dependencies and bounded human-override governance.
+- `management-science` now hosts a tested normative decision-science flagship (Bayesian EVSI, CARA, AHP, group judgments, MAVT, TOPSIS and probability-free robustness) alongside pre-existing capacity expansion and strategic budget cases.
+- `resource-allocation-optimization` provides DEA and mechanism-design implementations; `inventory-optimization-and-control` provides a behavioral newsvendor benchmark.
+- `classical-scheduling-optimization` provides project risk/portfolio selection; `pricing-and-revenue-optimization` provides experimental treatment decisions and structural demand models; `robust-and-adaptive-supply-chain-optimization` provides stock-flow and agent-based simulation.
+
+**Curriculum distinctions:** Multi-objective optimization produces feasible trade-offs; MCDM requires preference/value elicitation. Forecast scores are not automatically calibrated probability judgments. An influence graph is not causal identification. Monitoring override rates is not a causal estimate of the value of human intervention. Expert elicitation, full RDM/info-gap, multi-attribute utility under risk, process mining and organizational model-risk evaluation remain scoped opportunities.

@@ -210,6 +210,15 @@
       "default_branch": "main"
     },
     {
+      "repository": "management-science",
+      "title": "Management Science",
+      "axis": "application",
+      "area": "management-science",
+      "group": "Management and decision science",
+      "role": "standalone",
+      "default_branch": "main"
+    },
+    {
       "repository": "manufacturing-systems-optimization",
       "title": "Manufacturing Systems Optimization",
       "axis": "application",

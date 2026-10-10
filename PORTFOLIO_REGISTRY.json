@@ -36,6 +36,9 @@
       "quantitative-trading-and-market-microstructure-optimization",
       "pricing-and-revenue-optimization",
       "machine-learning-in-finance-course"
+    ],
+    "Management Science and Decision Systems": [
+      "management-science"
     ]
   },
   "methodologies": {
@@ -88,13 +91,23 @@
       "time-series-intelligence",
       "manufacturing-systems-optimization",
       "pricing-and-revenue-optimization"
+    ],
+    "Decision Analysis, Preferences and Governance": [
+      "decision-framing-and-sequential-decision-modeling",
+      "management-science",
+      "sequential-decision-analytics",
+      "resource-allocation-optimization",
+      "pricing-and-revenue-optimization"
     ]
   },
   "planned_methodological_umbrellas": [
     "advanced-bilevel-and-equilibrium-optimization",
     "simulation-input-modeling-and-variance-reduction",
     "optimization-decision-services-and-observability",
-    "gpu-accelerated-first-order-optimization"
+    "gpu-accelerated-first-order-optimization",
+    "expert-probability-elicitation-and-forecast-calibration",
+    "deep-uncertainty-and-real-options",
+    "decision-model-risk-and-causal-impact-evaluation"
   ],
   "github_owner": "alperebalci"
 }

@@ -46,6 +46,10 @@ Portfolio curriculum, coverage analysis, scope decisions, and strategic prioriti
 - [Pricing And Revenue Optimization](https://github.com/alperebalci/pricing-and-revenue-optimization)
 - [Machine Learning In Finance Course](https://github.com/alperebalci/machine-learning-in-finance-course)
 
+### Management Science and Decision Systems
+
+- [Management Science](https://github.com/alperebalci/management-science)
+
 ## By methodology
 
 ### Mathematical Programming and Exact Methods
@@ -105,6 +109,14 @@ Portfolio curriculum, coverage analysis, scope decisions, and strategic prioriti
 - [Manufacturing Systems Optimization](https://github.com/alperebalci/manufacturing-systems-optimization)
 - [Pricing And Revenue Optimization](https://github.com/alperebalci/pricing-and-revenue-optimization)
 
+### Decision Analysis, Preferences and Governance
+
+- [Decision Framing And Sequential Decision Modeling](https://github.com/alperebalci/decision-framing-and-sequential-decision-modeling)
+- [Management Science](https://github.com/alperebalci/management-science)
+- [Sequential Decision Analytics](https://github.com/alperebalci/sequential-decision-analytics)
+- [Resource Allocation Optimization](https://github.com/alperebalci/resource-allocation-optimization)
+- [Pricing And Revenue Optimization](https://github.com/alperebalci/pricing-and-revenue-optimization)
+
 ## Portfolio conventions
 
 Primary umbrella repositories should:
@@ -121,5 +133,8 @@ Primary umbrella repositories should:
 - `simulation-input-modeling-and-variance-reduction`
 - `optimization-decision-services-and-observability`
 - `gpu-accelerated-first-order-optimization`
+- `expert-probability-elicitation-and-forecast-calibration`
+- `deep-uncertainty-and-real-options`
+- `decision-model-risk-and-causal-impact-evaluation`
 
 These are research directions, not claims of completed work or commitments to create separate repositories. Extend an existing umbrella first; a new top-level umbrella requires multiple substantial implementations.
