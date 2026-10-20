@@ -100,7 +100,6 @@ Read the guide in this order:
 15. [Explainable optimization](docs/15-explainable-optimization.md)
 16. [Operations Research software ecosystem: modelers, solvers and specialized engines](docs/16-or-software-ecosystem.md)
 17. [Learning-enabled and AI-powered optimization](docs/17-learning-enabled-optimization.md)
-18. [Smooth mathematical optimization: foundations and optimality](docs/18-smooth-mathematical-optimization-foundations.md) — convexity, optimality conditions, KKT, duality and algorithm assumptions.
 
 ## A first example: classify Genetic Algorithm correctly
 
